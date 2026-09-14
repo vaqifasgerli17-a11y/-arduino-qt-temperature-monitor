@@ -4,7 +4,6 @@ project(temp VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Bu iki sətir C++ obyektlərinin QML-ə keçməsi üçün MOC xətasını həll edir:
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 
@@ -25,7 +24,7 @@ qt_add_qml_module(apptemp
     QML_FILES Main.qml
 )
 
-# Kitabxanaları layihəyə bağlayırıq (executable yarandıqdan SONRA)
+# Kitabxanaları layihəyə bağlayırıq
 target_link_libraries(apptemp
     PRIVATE Qt6::Gui Qt6::Qml Qt6::Quick Qt6::QuickControls2 Qt6::SerialPort
 )
